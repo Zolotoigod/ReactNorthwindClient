@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
+import {Button} from 'react-bootstrap';
 
 class Home extends Component {
     
     render(){
         return(
-            <div>
-                <h2>NorthWindClient</h2>
+            <div className='d-grid gap-3 mt-5'>
+                <Button variant="secondary" size='lg' href='/products'><h3>Products</h3></Button>
+                <Button variant="secondary" size='lg' href='/products'><h3>Categories</h3></Button>
+                <Button variant="secondary" size='lg' href='/products'><h3>Blog</h3></Button>
             </div>
         )
     }

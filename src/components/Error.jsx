@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 
-class Categories extends Component {
+class Error extends Component {
     
     render(){
         return(
             <div className='mt-5 d-flex justify-content-left'>
-                <h2>Categories</h2>
+                <h2>Not implement yet</h2>
             </div>
         )
     }
 }
 
-export default Categories
+export default Error
