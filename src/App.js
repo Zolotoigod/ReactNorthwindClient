@@ -10,6 +10,7 @@ import Error from './components/Error';
 
 
 function App() {
+  const mainPath = 'https://localhost:5001/';
   return (
     <BrowserRouter>
     <div className='container'>
@@ -18,8 +19,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={ <Home /> }/>
-        <Route path='/products' element={ <Products/> } />
-        <Route path='/categories' element={ <Categories/> } />
+        <Route path='/products' element={ <Products mainPath={mainPath}/> } />
+        <Route path='/categories' element={ <Categories mainPath={mainPath} /> } />
         <Route path='/blog' element={<Blog />}/>
         <Route path='*' element={<Error />}/>
       </Routes>
