@@ -2,11 +2,11 @@ import React, {useEffect, useState} from 'react';
 import { Table } from 'react-bootstrap';
 import NumberFormat from 'react-number-format';
 
-function Products(){
+function Products(props){
     const [prods, setProds] = useState({array:[]});
     let currentPage = 0;
     useEffect(() => {
-        const productPath = `https://localhost:5001/api/products/${currentPage * 10}/10`;
+        const productPath = props.mainPath + `api/products/${currentPage * 10}/10`;
         fetch(productPath)
         .then(response => response.json())
         .then(data => {setProds({array:data})});
